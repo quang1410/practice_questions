@@ -92,4 +92,90 @@ Answer:
     <span style="background-color: #FFFF00">Yellow text.</span>
 ```
 
+### 7. What were some of the key goals and motivations for the HTML5 specification?
+
+Answer:
+
+> HTML5 was designed to replace HTML 4, XHTML, and the HTML DOM Level 2. The key goals and motivations behind the HTML5 specification were to:
+
+- Deliver rich content (graphics, movies, etc.) without the need for additional plugins, such as Flash.
+- Provide better semantic support for web page structure through new structural element tags.
+- Provide a stricter parsing standard to simplify error handling, ensure more consistent cross-browser behaviour, and simplify compatibility with documents written to older standards.
+- Provide better cross-platform support whether running on a PC, Tablet, or Smartphone.
+
+### 8. What is Character Encoding?
+
+Answer:
+
+> To display an HTML page correctly, a web browser must know which character set (character encoding) to use. This is specified in the tag:
+
+HTML 4:
+
+```html
+  <meta http-equiv="Content-Type" content="text/html;charset=ISO-8859-1">
+```
+
+HTML5: 
+
+```html
+  <meta charset="UTF-8">
+```
+
+### 9. What is a self closing tag?
+
+Answer:
+
+> In HTML5 it is not strictly necessary to close certain HTML tags. The tags that aren’t required to have specific closing tags are called “self closing” tags.
+
+> An example of a self closing tag is something like a line break (`<br />`) or the meta tag (`<meta>`). This means that the following are both acceptable:
+
+```html
+  <meta charset="UTF-8">
+  ...
+  <meta charset="UTF-8" />
+```
+
+### 10. How Can I Get Indexed Better by Search Engines?
+
+Answer:
+
+> It is possible to get indexed better by placing the following two statements in the `<HEAD>` part of your documents:
+
+```html
+  <META NAME="keywords" CONTENT="keyword keyword keyword keyword">
+  <META NAME="description" CONTENT="description of your site">
+```
+Both may contain up to 1022 characters. If a keyword is used more than 7 times, the keywords tag will be ignored altogether. Also, you cannot put markup (other than entities) in the description or keywords list.
+
+### 11. Briefly describe the correct usage of the following HTML5 semantic elements: header, article, section, footer
+
+Answer:
+
+> `<header>` is used to contain introductory and navigational information about a section of the page. This can include the section heading, the author’s name, time and date of publication, table of contents, or other navigational information.
+
+> `<article>` is meant to house a self-contained composition that can logically be independently recreated outside of the page without losing it’s meaining. Individual blog posts or news stories are good examples.
+
+> `<section>` is a flexible container for holding content that shares a common informational theme or purpose.
+
+> `<footer>` is used to hold information that should appear at the end of a section of content and contain additional information about the section. Author’s name, copyright information, and related links are typical examples of such content.
+
+### 12. What's the difference between an "attribute" and a "property" in HTML?
+
+Answer:
+
+> Attributes are defined on the HTML markup but properties are defined on the DOM. To illustrate the difference, imagine we have this text field in our HTML:
+
+``` javascript
+<input type="text" value="Hello">.
+
+const input = document.querySelector('input');
+console.log(input.getAttribute('value')); // Hello
+console.log(input.value); // Hello
+```
+>But after you change the value of the text field by adding "World!" to it, this becomes:
+
+```javascript
+console.log(input.getAttribute('value')); // Hello
+console.log(input.value); // Hello World!
+```
 Source: https://devinterview.io/dev/html5-interview-questions
